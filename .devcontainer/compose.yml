@@ -1,0 +1,13 @@
+services:
+  python:
+    build:
+      dockerfile: Dockerfile
+      context: python/
+      args:
+        - UID
+        - GID
+    tty: true
+    stdin_open: true
+    restart: always
+    volumes:
+      - ..:/workspace
